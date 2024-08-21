@@ -2,7 +2,7 @@ import pendulum
 import datetime
 
 from airflow.models.dag import DAG
-from airflow.operators.bash import EmptyOperator
+from airflow.operators.empty import EmptyOperator
 
 
 with DAG(
