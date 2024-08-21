@@ -13,14 +13,14 @@ with DAG(
 ) as dag:
 
     # [START howto_operator_bash]
-    bash_orange = BashOperator(
-        task_id="bash_orange",
+    t1_orange = BashOperator(
+        task_id="t1_orange",
         bash_command="/opt/airflow/plugins/shell/select_fruit.sh ORANGE",
     )
-    bash_grape = BashOperator(
-        task_id="bash_grape",
+    t2_grape = BashOperator(
+        task_id="t2_grape",
         bash_command="/opt/airflow/plugins/shell/select_fruit.sh GRAPE",
     )
 
-    bash_orange >> bash_grape
+    t1_orange >> t2_grape
     # [END howto_operator_bash]
