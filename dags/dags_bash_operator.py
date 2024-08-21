@@ -11,9 +11,6 @@ with DAG(
     start_date=pendulum.datetime(2024, 1, 1, tz="Asia/Seoul"),
     catchup=False,
 ) as dag:
-    run_this_last = EmptyOperator(
-        task_id="run_this_last",
-    )
 
     # [START howto_operator_bash]
     bash_t1 = BashOperator(
