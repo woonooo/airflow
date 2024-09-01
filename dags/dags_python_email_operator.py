@@ -23,4 +23,4 @@ with DAG(
                         {{ti.xcom_pull(task_ids="something_task)}} 했습니다 <br>'
     )
 
-    some_logic >> send_email
+    some_logic() >> send_email
