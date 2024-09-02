@@ -29,17 +29,17 @@ with DAG(
         print(kwargs['selected'])
 
     task_a = PythonOperator(
-        taskk_id='task_a',
+        task_id='task_a',
         python_callable=common_func,
         op_kwargs={'selected': 'A'}
     )
     task_b = PythonOperator(
-        taskk_id='task_b',
+        task_id='task_b',
         python_callable=common_func,
         op_kwargs={'selected': 'B'}
     )
     task_c = PythonOperator(
-        taskk_id='task_c',
+        task_id='task_c',
         python_callable=common_func,
         op_kwargs={'selected': 'C'}
     )

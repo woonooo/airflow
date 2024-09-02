@@ -8,8 +8,8 @@ with DAG(
     start_date=pendulum.datetime(2024, 8, 10, tz='Asia/Seoul'),
     catchup=False,
 ) as dag:
-    @task(task_id='task_using_macros)',
-          templates_dict={'start_date':'data_interval_end.in_timezone("Asia/Seoul") + macro.dateutil.relativedelta.relativedelta(months = -1, days = 1) | ds',
+    @task(task_id='task_using_macros',
+        templates_dict={'start_date':'data_interval_end.in_timezone("Asia/Seoul") + macro.dateutil.relativedelta.relativedelta(months = -1, days = 1) | ds',
                           'end_date':'data_interval_end.in_timezone("Asia/Seoul").replace(day=1) + macro.dateutil.relativedelta.relativedelta(days = -1) | ds'})
     def get_datetime_macro(**kwargs):
         template_dict = kwargs.get("templates_dict") or {}
