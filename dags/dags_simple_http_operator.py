@@ -17,8 +17,8 @@ with DAG(
         http_conn_id='openapi.seoul.go.kr',
         endpoint='{{var.value.apikey_openapi_seoul_go_kr}}/json/tbCycleStationInfo/1/12/',
         method='GET',
-        header={
-            'content-type': 'application/json',
+        headers={
+            'Content-Type': 'application/json',
             'charset': 'utf-8',
             'Accept': '*/*'
         }
