@@ -23,7 +23,7 @@ with DAG(
         reset_dag_run=True, # 다시 실행할 것인가
         wait_for_completion=False, # trigger된 dag 기다리는가
         poke_interval=60, # trigger한 dag이 성공인지 살펴보는 시간주기
-        allowed_states=['Success'],
+        allowed_states=['success'],
         failed_states=None 
     )
 
