@@ -1,3 +1,12 @@
+'''
+dag을 실행하기 위한 조건
+1. 실행 날짜에 맞는 corona 현황파일이 존재
+2. DB에 테이블 미리 생성
+3. csv파일 구분자를 Tab으로 변경("%s/,/\t/")
+4. 데이터 중간에 구분자 오류 또는 특수문자 제거
+-> 실행하기 위한 조건이 조건이 많아 오류가 많이 발생함
+'''
+
 from airflow import DAG
 import pendulum
 from airflow.operators.python import PythonOperator
