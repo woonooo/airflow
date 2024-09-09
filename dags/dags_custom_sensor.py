@@ -1,6 +1,6 @@
 from airflow import DAG
 import pendulum
-from plugins.sensors.seoul_api_date_sensor import SeoulApiDateSensor 
+from sensors.seoul_api_date_sensor import SeoulApiDateSensor 
 
 '''
 현재 시점에서 사용불가능한 dag (day_off가 1년 넘게 차이나는 상황) -> 결과가 up_for_reschedule
