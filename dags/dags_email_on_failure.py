@@ -6,7 +6,7 @@ from airflow.decorators import task
 from airflow.exceptions import AirflowException
 from airflow.operators.bash import BashOperator
 
-email_str = Variable.get("email target")
+email_str = Variable.get("email_target")
 email_lst = [email.strip() for email in email_str.split(',')]
 
 with DAG(
